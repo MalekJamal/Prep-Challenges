@@ -75,8 +75,8 @@ const cvFormatter = (arr) => {
 // Repeat the previous step until there are no elements to read in nums and index.
 
 //Example 1
-// Input: nums = [0, 1, 2, 3, 4], index = [0, 4, 1, 2, 3]
-// Output: [0,4,1,2,3]
+// Input: nums = [0,1,2,3,4], index = [0,1,2,2,1]
+// Output: [0,4,1,3,2] //[0,4,1,2,3]
 
 //Example 2
 // Input: nums = [1, 2, 3, 4, 0], index = [0, 1, 2, 3, 0]
@@ -85,6 +85,10 @@ const cvFormatter = (arr) => {
 const targetArrayInGivenOrder = (numsArr, indexArr) => {
   let targetArr;
   // write your code here
+  targetArr=[];
+  for(let i=0; i < numsArr.length ; i++){
+    targetArr.splice(indexArr[i] , 0 , numsArr[i])
+}
   return targetArr;
 };
 // -------------------------------------------------------------------------------------------------------
@@ -103,7 +107,9 @@ const targetArrayInGivenOrder = (numsArr, indexArr) => {
 
 const arrInc = (arr) => {
   let result = [];
-  // write your code here
+  for(let i=0;i<arr.length;i++){
+    result[i]=arr[i]+10;
+  }
   return result;
 };
 // -------------------------------------------------------------------------------------------------------
