@@ -12,6 +12,7 @@
 const runningSumOfArray = (arr) => {
   let runningSumArray;
   // write your code here
+  
   return runningSumArray;
 };
 // -------------------------------------------------------------------------------------------------------
@@ -33,6 +34,28 @@ const runningSumOfArray = (arr) => {
 // Output: nums = [0,1,3,0,4,_,_,_]
 const removeElementFromArray = (arr, value) => {
   // write your code here
+  let arr2 = [];
+  //loop in the array to replace all occurrences of the number in the array with "_".
+  for (let i = 0; i < arr.length; i++) {
+    if (value === arr[i]) {
+      arr[i] = "_";
+    }
+  }
+  // here to choose the only the numbers from arr and sotre them into arr2
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof(arr[i]) === typeof (1)) {
+      arr2.push(arr[i]);
+    }
+  }
+  // here started the loop from the last index in arr2 till the last index in arr, then push the rest of '_' in arr2
+  for (let j = arr2.length - 1; j < arr.length - 1; j++) {
+    arr2.push("_");
+    if (j === arr.length - 1) {
+      break;
+    }
+  }
+  // return the actual arrau
+  arr=arr2;
   return arr;
 };
 // -------------------------------------------------------------------------------------------------------
@@ -51,6 +74,14 @@ const removeElementFromArray = (arr, value) => {
 
 const oddFiltration = (arr) => {
   // write your code here
+  const arr2=[];
+  for(let i=0;i<arr.length;i++){
+    if(arr[i] % 2 !== 0){
+      arr2.push(arr[i]);
+    }
+  }
+  arr=arr2;
+  return arr;
 };
 // -------------------------------------------------------------------------------------------------------
 
